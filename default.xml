@@ -3,9 +3,15 @@
 
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
+  <remote  name="cm"
+           fetch="https://github.com/CyanogenMod/" />  
+  <remote name="jcs"
+           fetch="https://github.com/jcsullins/" />
+  <remote name="tm"
+           fetch="https://github.com/TheMuppets" />
   <default revision="refs/tags/android-4.1.1_r4"
            remote="aosp"
-           sync-j="4" />
+           sync-j="4" />           
 
   <project path="build" name="platform/build" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -20,6 +26,7 @@
   <project path="development" name="platform/development" />
   <project path="device/common" name="device/common" />
   <project path="device/sample" name="device/sample" />
+  <project path="device/hp/tenderloin" name="android_device_hp_tenderloin" remote="cm" revision="jellybean" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="platform/external/aac" />
   <project path="external/android-mock" name="platform/external/android-mock" />
@@ -197,6 +204,7 @@
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
   <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" />
+  <project path="kernel/hp/tenderloin" name"kernel-tenderloin-3.0" remote="jcs" revision="staging2" />
   <project path="libcore" name="platform/libcore" />
   <project path="libnativehelper" name="platform/libnativehelper" />
   <project path="ndk" name="platform/ndk" />
@@ -287,5 +295,6 @@
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/security" name="platform/system/security" />
   <project path="system/vold" name="platform/system/vold" />
+  <project path="vendor/hp" name"proprietary_vendor_hp" remote="tm" revision="jellybean" />
 
 </manifest>
